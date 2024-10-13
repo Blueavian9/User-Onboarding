@@ -1,7 +1,7 @@
 import * as React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css";
-import index.css from "./index.css";
+import "./index.css"; // Correct way to import CSS
+// Remove the incorrect import
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
