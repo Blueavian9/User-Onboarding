@@ -1,25 +1,16 @@
-import * as yup from 'yup';
-
+import * as yup from "yup";
 
 const formSchema = yup.object().shape({
   username: yup.string().required(),
   email: yup.string().email().required(),
   password: yup.string().min(8).required(),
-  tos: yup.boolean().oneOf([true], 'You must accept the terms and conditions').required(),
+  tos: yup
+    .boolean()
+    .oneOf([true], "You must accept the terms and conditions")
+    .required(),
 });
 
-eport default formSchema;
-
-
-
-
-
-
-
-
-
-
-
+export default formSchema;
 
 // original schema code
 // const fromSchema = you.object().shape({
