@@ -3,7 +3,7 @@ import "./App.css";
 import "./index.css";
 import schema from "./validation/formSchema";
 
-import Form from "../src/Components/Form";
+import Form from "./Components/Form";
 
 const initialFormValues = {
   username: "",
