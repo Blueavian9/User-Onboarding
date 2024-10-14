@@ -7,6 +7,20 @@ const formSchema = yup.object().shape({
   password: yup.string().min(8).required(),
   tos: yup.boolean().oneOf([true], 'You must accept the terms and conditions').required(),
 });
+
+eport default formSchema;
+
+
+
+
+
+
+
+
+
+
+
+
 // original schema code
 // const fromSchema = you.object().shape({
 //   username: yup
