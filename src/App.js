@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import "./App.css";
 import "./index.css";
 import schema from "./validation/formSchema";
-
-import Form from "./Components/Form";
+import * as yup from "yup";
+import Form from "./Components/Form.js";
 
 const initialFormValues = {
   username: "",
