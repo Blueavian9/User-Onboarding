@@ -36,7 +36,7 @@ function Form({ values, errors, change, submit }) {
             onChange={change}
             required
           />
-          <label>Email</label>
+          {/* <label>Email</label>
           {errors.email && <p className="error">{errors.email}</p>}
         </div>
         <div className="user-box">
@@ -45,7 +45,7 @@ function Form({ values, errors, change, submit }) {
             value={values.message || ""}
             onChange={change}
             required
-          />
+          /> */}
           <label>Message</label>
           {errors.message && <p className="error">{errors.message}</p>}
         </div>
