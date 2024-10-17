@@ -1,6 +1,6 @@
 import * as React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css"; // Correct way to import CSS
+import Form from "./Form.css"; // Correct way to import CSS
 // Remove the incorrect import
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";

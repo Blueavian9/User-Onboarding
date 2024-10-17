@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import "./App.css";
-import "./index.css";
+import "./Form.css";
 import schema from "./validation/formSchema";
 import * as yup from "yup";
-import Form from "./Components/Form.js";
+import Form from "./Components/Form";
 
 const initialFormValues = {
   username: "",
@@ -23,8 +23,10 @@ function App() {
   const [formValues, setFormValues] = useState(initialFormValues);
   const [formErrors, setFormErrors] = useState(initialFormErrors);
 
-  const handleSubmit = () => {
-    // Work in progress for form submission
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Implement form submission logic here
+    console.log("Form submitted with values:", formValues);
   };
 
   const validate = (name, value) => {
@@ -39,14 +41,21 @@ function App() {
       });
   };
 
-  const handleChange = (name, value) => {
-    validate(name, value);
-    setFormValues({ ...formValues, [name]: value });
+  const handleChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    const valueToUse = type === "checkbox" ? checked : value;
+    validate(name, valueToUse);
+    setFormValues({ ...formValues, [name]: valueToUse });
   };
 
   return (
     <div className="App">
-      <Form values={formValues} change={handleChange} />
+      <Form
+        values={formValues}
+        errors={formErrors}
+        change={handleChange}
+        submit={handleSubmit}
+      />
     </div>
   );
 }
