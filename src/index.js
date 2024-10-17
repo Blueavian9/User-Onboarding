@@ -1,6 +1,7 @@
 import * as React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css"; // Keep this if you have global styles
+import "./Components/Form.css"; // Keep this if you have global styles
+import "./index.js";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
